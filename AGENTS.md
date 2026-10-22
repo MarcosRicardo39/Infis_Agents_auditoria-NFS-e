@@ -49,3 +49,9 @@ Não implementar aplicação, criar scripts ou testes executáveis, instalar dep
 ## Verificação da entrega documental
 
 Conferir os seis caminhos, Markdown legível, consistência dos nomes e do responsável, distinção entre proposta e aprovação e cobertura de isolamento, auditoria, segurança e integração com múltiplos agentes. Não executar ou implementar a aplicação para validar esta etapa.
+
+## Atualização de escopo — estrutura da solução
+
+Etapa atual autorizada: criar a estrutura da solução .NET 10, projetos vazios, referências entre projetos e projetos xUnit sem casos de teste. Permitir somente o bootstrap mínimo da API, sem endpoints ou funcionalidades. Não implementar regras, serviços, contratos de negócio, persistência, integrações ou controles operacionais. Restauração e compilação são permitidas para verificar a estrutura; funcionalidades futuras dependem de autorização e especificações aplicáveis aprovadas.
+
+Esta autorização substitui as restrições anteriores apenas quanto à criação e verificação da estrutura. Os princípios de isolamento, auditoria e segurança continuam obrigatórios para as etapas futuras.

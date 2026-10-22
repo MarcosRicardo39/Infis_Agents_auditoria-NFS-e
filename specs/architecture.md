@@ -2,7 +2,25 @@
 
 ## Estado e fronteiras
 
-Documento conceitual com a stack definida para a implementação futura. Responsável: Marcos, INFIS Consultoria. Os contratos abaixo são propostas para validação com a SOFIA. Esta atualização é exclusivamente documental: não cria código, testes, dependências ou infraestrutura e não ativa integrações.
+Arquitetura com a stack definida para a implementação futura. Responsável: Marcos, INFIS Consultoria. Os contratos abaixo são propostas para validação com a SOFIA. A etapa atual autoriza somente a solução, projetos vazios, referências e bootstrap mínimo da API; funcionalidades e integrações permanecem pendentes.
+
+## Estrutura da solução
+
+Solução: `Infis.AuditoriaNfse.sln`. Todos os projetos utilizam `net10.0`.
+
+| Diretório/projeto | Responsabilidade futura | Referências de projeto |
+| --- | --- | --- |
+| src/Infis.AuditoriaNfse.Api | Host ASP.NET Core e composição da aplicação | Application, Infrastructure, Contracts |
+| src/Infis.AuditoriaNfse.Domain | Entidades e regras de domínio independentes de tecnologia | Nenhuma |
+| src/Infis.AuditoriaNfse.Application | Casos de uso e abstrações de acesso a serviços | Domain, Contracts |
+| src/Infis.AuditoriaNfse.Contracts | Contratos públicos versionados, ainda não definidos | Nenhuma |
+| src/Infis.AuditoriaNfse.Infrastructure | Adaptadores OpenAI, Semantic Kernel, pgvector, MongoDB e SOFIA | Application |
+| tests/Infis.AuditoriaNfse.UnitTests | Testes xUnit de domínio e aplicação | Domain, Application |
+| tests/Infis.AuditoriaNfse.IntegrationTests | Testes xUnit da API e adaptadores | Api, Infrastructure |
+
+Os projetos de biblioteca estão vazios. A API contém somente inicialização do host, sem endpoints, inclusive sem o exemplo Hello World. Os projetos xUnit não contêm casos de teste. Swagger, conectores, bancos, autenticação, isolamento e auditoria não estão implementados. As dependências específicas das integrações serão adicionadas na etapa correspondente; somente os pacotes gerados pelo template xUnit são referenciados para testes.
+
+Referências entre projetos organizam dependências de compilação e não implementam isolamento de dados ou de execução. A validação estrutural consiste em restaurar e compilar a solução, sem iniciar serviços ou chamar provedores externos.
 
 ## Stack tecnológica definida
 
@@ -102,7 +120,7 @@ Falhas de autorização, isolamento ou auditoria obrigatória interrompem a aç�
 
 Os testes futuros utilizarão xUnit para verificar regras por vigência e jurisdição, proveniência dos achados, isolamento no pgvector e MongoDB, autorização de funções no Semantic Kernel, falhas e limites nas chamadas à OpenAI, idempotência e contratos SOFIA. Simulações de LLM permitirão cenários controlados; verificações com serviços reais dependerão de ambiente isolado e dados autorizados.
 
-O contrato OpenAPI e a interface Swagger deverão refletir as operações aprovadas, incluindo autenticação, estados e erros. Sua exposição e execução de operações deverão seguir o controle de acesso do ambiente. Nenhum teste ou documento OpenAPI executável será criado nesta etapa.
+O contrato OpenAPI e a interface Swagger deverão refletir as operações aprovadas, incluindo autenticação, estados e erros. Sua exposição e execução de operações deverão seguir o controle de acesso do ambiente. Nesta etapa existem somente projetos xUnit vazios; casos de teste e configuração OpenAPI/Swagger permanecem para implementação futura.
 
 ## Decisões arquiteturais pendentes
 

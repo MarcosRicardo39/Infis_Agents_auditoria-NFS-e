@@ -51,3 +51,9 @@ O escopo futuro é receber documentos autorizados, verificar sua qualidade, apli
 - Metas de volume, latência, disponibilidade, custo e qualidade.
 
 As pendências impedem assumir cobertura fiscal ou prontidão operacional; a implementação depende da aprovação da linha de base correspondente.
+
+## Atualização de escopo estrutural
+
+Etapa atual autorizada: criar a estrutura da solução .NET 10, projetos vazios, referências entre projetos e projetos xUnit sem casos de teste. Permitir somente o bootstrap mínimo da API, sem endpoints ou funcionalidades. Não implementar regras, serviços, contratos de negócio, persistência, integrações ou controles operacionais. Restauração e compilação são permitidas para verificar a estrutura; funcionalidades futuras dependem de autorização e especificações aplicáveis aprovadas.
+
+A estrutura não comprova atendimento aos RF ou RNF e não autoriza operação com dados reais.

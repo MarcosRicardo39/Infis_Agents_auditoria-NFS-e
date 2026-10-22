@@ -31,3 +31,7 @@ Definir os princípios obrigatórios do agente de IA Auditoria de NFS-e, destina
 ## Definição de conformidade
 
 Uma entrega futura só poderá ser aceita com requisitos rastreados, evidências de validação e atendimento às políticas de isolamento, segurança e auditoria. Exceções exigem decisão documentada de Marcos e não podem autorizar acesso indevido ou ocultação de evidências.
+
+## Etapa estrutural autorizada
+
+Etapa atual autorizada: criar a estrutura da solução .NET 10, projetos vazios, referências entre projetos e projetos xUnit sem casos de teste. Permitir somente o bootstrap mínimo da API, sem endpoints ou funcionalidades. Não implementar regras, serviços, contratos de negócio, persistência, integrações ou controles operacionais. Restauração e compilação são permitidas para verificar a estrutura; funcionalidades futuras dependem de autorização e especificações aplicáveis aprovadas.

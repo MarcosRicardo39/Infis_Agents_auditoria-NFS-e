@@ -37,3 +37,14 @@ As tarefas concluídas abaixo representam apenas criação documental. Não repr
 - [ ] GOV-01 — Obter autorização explícita de Marcos para iniciar implementação após aprovação das especificações aplicáveis.
 
 Nenhuma tarefa de implementação está autorizada nesta etapa. Estimativas e atribuições técnicas serão definidas após o refinamento.
+
+## Estrutura da solução autorizada
+
+A autorização atual limita-se à estrutura e substitui a restrição anterior para esta entrega.
+
+- [x] EST-01 — Criar solução .NET 10 e projetos Api, Application, Domain, Infrastructure e Contracts.
+- [x] EST-02 — Criar projetos xUnit UnitTests e IntegrationTests sem testes de exemplo.
+- [x] EST-03 — Configurar referências entre camadas e remover exemplos funcionais.
+- [x] EST-04 — Verificar restauração e compilação da solução (sete projetos, zero avisos e zero erros).
+
+Nenhum controle operacional, regra fiscal ou integração está implementado.
